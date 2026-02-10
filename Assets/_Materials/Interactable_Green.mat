@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Interactable Variant 3
+  m_Name: Interactable_Green
   m_Shader: {fileID: -6465566751694194690, guid: 0927d29e476ce5843b1f7d2a96943c51, type: 3}
   m_Parent: {fileID: 2100000, guid: 76618f7490c40334fa7b685859587d2e, type: 2}
   m_ModifiedSerializedProperties: 2
@@ -27,9 +27,9 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Cull: 0
+    - _Cull: 2
     m_Colors:
-    - _BaseColor: {r: 0.9254902, g: 0.19590168, b: 0.13333331, a: 1}
+    - _BaseColor: {r: 0.1532968, g: 0.9254902, b: 0.13333331, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4778894459174991954
