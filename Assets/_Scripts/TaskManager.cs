@@ -28,8 +28,10 @@ public class TaskManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        //else
-           // Destroy(gameObject);
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     /// <summary>

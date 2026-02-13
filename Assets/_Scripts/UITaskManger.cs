@@ -146,4 +146,15 @@ public class UITaskManager : MonoBehaviour
 
         checkmark.color = originalColor;
     }
+    private void OnEnable()
+    {
+        if (TaskManager.Instance != null)
+            TaskManager.Instance.OnTaskCompleted.AddListener(OnTaskCompleted);
+    }
+
+    private void OnDisable()
+    {
+        if (TaskManager.Instance != null)
+            TaskManager.Instance.OnTaskCompleted.RemoveListener(OnTaskCompleted);
+    }
 }

@@ -891,66 +891,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564796391}
   m_CullTransparentMesh: 1
---- !u!1 &565611694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 565611695}
-  - component: {fileID: 565611696}
-  m_Layer: 0
-  m_Name: Task Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &565611695
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565611694}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5645, y: 0.125, z: -0.70346}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &565611696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 565611694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f675582976673c4c89d005e8bf48d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TaskManager
-  tasks:
-  - taskID: 01
-    description: Fire Extinguisher
-    isCompleted: 0
-  - taskID: 02
-    description: "Medkit\t"
-    isCompleted: 0
-  - taskID: 03
-    description: Glasses
-    isCompleted: 0
-  OnTaskCompleted:
-    m_PersistentCalls:
-      m_Calls: []
-  OnAllTasksCompleted:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &586486293 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -4082,6 +4022,7 @@ GameObject:
   - component: {fileID: 2069151814}
   - component: {fileID: 2069151813}
   - component: {fileID: 2069151812}
+  - component: {fileID: 2069151817}
   m_Layer: 0
   m_Name: PlaceMedkit
   m_TagString: Untagged
@@ -4119,10 +4060,10 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 565611696}
-        m_TargetAssemblyTypeName: TaskManager, Assembly-CSharp
-        m_MethodName: CompleteTask
-        m_Mode: 5
+      - m_Target: {fileID: 2069151817}
+        m_TargetAssemblyTypeName: CompleteTask, Assembly-CSharp
+        m_MethodName: Complete
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4240,6 +4181,19 @@ Transform:
   - {fileID: 1715180569}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2069151817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069151811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddba566b36549d247ae87e5adaf797a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompleteTask
+  taskID: 02
 --- !u!1 &196977305468683332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6350,7 +6304,6 @@ SceneRoots:
   - {fileID: 1582990868}
   - {fileID: 3953970342977539823}
   - {fileID: 2068696715}
-  - {fileID: 565611695}
   - {fileID: 1669516447}
   - {fileID: 2069151816}
   - {fileID: 913747825}
