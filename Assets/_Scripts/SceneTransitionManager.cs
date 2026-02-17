@@ -45,4 +45,19 @@ public class SceneTransitionManager : MonoBehaviour
 
         operation.allowSceneActivation = true;
     }
+    public void ExitGame()
+    {
+        StartCoroutine(ExitGameRoutine());
+    }
+
+    IEnumerator ExitGameRoutine()
+    {
+        // Start fading out
+        fadeScreen.FadeOut();
+        // Wait for the fade duration to complete
+        yield return new WaitForSeconds(fadeScreen.fadeDuration);
+        // Quit the application
+        Application.Quit();
+        Debug.Log("Exiting game...");
+    }
 }
