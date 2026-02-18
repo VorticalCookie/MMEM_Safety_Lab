@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class ColliderTrigger : MonoBehaviour
+{
+    [Header("Mesh Renderer to Enable")]
+    public MeshRenderer meshRendererToEnable;
+    [Header("Pop Up Panel to Enable")]
+    public GameObject popUpPanelToEnable;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player entered the trigger!");
+            // Disable the assigned MeshRenderer
+            if (meshRendererToEnable != null)
+            {
+                meshRendererToEnable.enabled = true;
+            }
+            if (popUpPanelToEnable != null)
+            {
+                popUpPanelToEnable.SetActive(true);
+            }
+        }
+    }
+}
