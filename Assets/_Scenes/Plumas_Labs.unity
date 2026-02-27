@@ -504,6 +504,13 @@ PrefabInstance:
       propertyPath: taskUIElements.Array.data[0].taskID
       value: 03
       objectReference: {fileID: 0}
+    - target: {fileID: 5859125081900916767, guid: 01cf75484d280844099c954c910c7e50, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: 'In order to enter the lab and pass trough the red stripes you must
+        have your Safety glasses on.
+
+'
+      objectReference: {fileID: 0}
     - target: {fileID: 8161283435968967059, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -555,6 +562,13 @@ PrefabInstance:
     - target: {fileID: 8161283435968967059, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831537804343233285, guid: 01cf75484d280844099c954c910c7e50, type: 3}
+      propertyPath: m_text
+      value: 'In order to enter the lab and pass trough the red stripes you must
+        have your Safety glasses on.
+
+'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -681,6 +695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2275949088433757758, guid: 599e2e099a3c5ee4393076047a770c1f, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: Place Fire Extinguisher.
+      objectReference: {fileID: 0}
     - target: {fileID: 7818561510120063891, guid: 599e2e099a3c5ee4393076047a770c1f, type: 3}
       propertyPath: m_Name
       value: TaskListUI (1)
@@ -805,6 +823,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6993923585896468309, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!114 &279022684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 279022676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 279022680}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &282456379
 GameObject:
   m_ObjectHideFlags: 0
@@ -1146,10 +1246,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1686641476}
-  - {fileID: 1691519842}
-  - {fileID: 1817465345}
-  - {fileID: 1058616104}
   - {fileID: 883801223}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1180,63 +1276,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1746907883427164037, guid: 556c974b5c5d99442ac7aa8409fa0a90, type: 3}
   m_PrefabInstance: {fileID: 1754809000}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &369859843
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 346266665}
-    m_Modifications:
-    - target: {fileID: 3186622738594787520, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_Name
-      value: Teleport Anchor Variant (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.57355
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8282547
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -37.85172
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
 --- !u!1 &382547459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7914339057346725682, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -1711,63 +1750,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1634208006565722391, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
---- !u!1001 &494066127
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 346266665}
-    m_Modifications:
-    - target: {fileID: 3186622738594787520, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_Name
-      value: Teleport Anchor Variant (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 39.077553
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8282547
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -37.85172
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
 --- !u!1 &524804971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2787162349197718257, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -1960,6 +1942,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8701614129967139944, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!114 &574781600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574781592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 574781596}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &610180612 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2369783832118753014, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -3100,6 +3164,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5818837614283929204, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!114 &854652739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854652733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 854652737}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &883801223 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
@@ -3321,11 +3467,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4960765664300344553, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
---- !u!4 &1058616104 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-  m_PrefabInstance: {fileID: 2041473371}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1088801837 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2351959510265856118, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -3353,6 +3494,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5716307502191475761, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!114 &1088801845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088801837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 1088801841}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1138136508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7857457457231345054, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -4001,6 +4224,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8155311039941861816, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1380045980}
+    - targetCorrespondingSourceObject: {fileID: -8155311039941861816, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1380045984}
     - targetCorrespondingSourceObject: {fileID: -952047354094057818, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 321700280}
@@ -4022,6 +4248,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8105982176731139795, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1207928166}
+    - targetCorrespondingSourceObject: {fileID: 8105982176731139795, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1207928170}
     - targetCorrespondingSourceObject: {fileID: 831850146777632735, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 996879223}
@@ -4073,6 +4302,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2277803028927443052, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 279022680}
+    - targetCorrespondingSourceObject: {fileID: 2277803028927443052, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 279022684}
     - targetCorrespondingSourceObject: {fileID: 4503919549153444106, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2088132798}
@@ -4091,9 +4323,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7117771497871145212, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1318662434}
+    - targetCorrespondingSourceObject: {fileID: -7117771497871145212, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1318662438}
     - targetCorrespondingSourceObject: {fileID: -2351959510265856118, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1088801841}
+    - targetCorrespondingSourceObject: {fileID: -2351959510265856118, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1088801845}
     - targetCorrespondingSourceObject: {fileID: -3106267497207554033, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 475693475}
@@ -4121,6 +4359,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8535956652658891605, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 574781596}
+    - targetCorrespondingSourceObject: {fileID: 8535956652658891605, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 574781600}
     - targetCorrespondingSourceObject: {fileID: 2176568698656400350, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1716846531}
@@ -4142,6 +4383,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7088951597104117392, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
       insertIndex: -1
       addedObject: {fileID: 854652737}
+    - targetCorrespondingSourceObject: {fileID: -7088951597104117392, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 854652739}
   m_SourcePrefab: {fileID: 100100000, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
 --- !u!1 &1163940150 stripped
 GameObject:
@@ -4524,6 +4768,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1341557975935299266, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!114 &1207928170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207928162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 1207928166}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1210746476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8579579413072598768, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -4795,6 +5121,11 @@ PrefabInstance:
       propertyPath: taskUIElements.Array.data[0].taskID
       value: 03
       objectReference: {fileID: 0}
+    - target: {fileID: 5859125081900916767, guid: 01cf75484d280844099c954c910c7e50, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: In order to enter the lab and pass trough the red stripes you must have
+        your Safety glasses on.
+      objectReference: {fileID: 0}
     - target: {fileID: 8161283435968967059, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3094002
@@ -4896,6 +5227,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7788161897044587778, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!114 &1318662438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318662430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 1318662434}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1324700777 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8066284729716353401, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -4946,6 +5359,13 @@ PrefabInstance:
     - target: {fileID: 5859125081900916767, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: taskUIElements.Array.data[0].taskID
       value: 03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859125081900916767, guid: 01cf75484d280844099c954c910c7e50, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: 'In order to enter the lab and pass trough the red stripes you must
+        have your Safety glasses on.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8161283435968967059, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: m_LocalScale.x
@@ -5117,63 +5537,88 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8495136064049802784, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
---- !u!1001 &1404024822
-PrefabInstance:
+--- !u!114 &1380045984
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 346266665}
-    m_Modifications:
-    - target: {fileID: 3186622738594787520, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_Name
-      value: Teleport Anchor Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 56.49555
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.8282547
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -37.85172
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1380045975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationArea
+  m_InteractionManager: {fileID: 0}
+  m_Colliders:
+  - {fileID: 1380045979}
+  m_InteractionLayers:
+    m_Bits: 2147483648
+  m_DistanceCalculationMode: 1
+  m_SelectMode: 1
+  m_FocusMode: 1
+  m_CustomReticle: {fileID: 0}
+  m_AllowGazeInteraction: 0
+  m_AllowGazeSelect: 0
+  m_OverrideGazeTimeToSelect: 0
+  m_GazeTimeToSelect: 0.5
+  m_OverrideTimeToAutoDeselectGaze: 0
+  m_TimeToAutoDeselectGaze: 3
+  m_AllowGazeAssistance: 0
+  m_FirstHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FirstFocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_LastFocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FocusExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Activated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Deactivated:
+    m_PersistentCalls:
+      m_Calls: []
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_StartingInteractionStrengthFilters: []
+  m_TeleportationProvider: {fileID: 0}
+  m_MatchOrientation: 0
+  m_MatchDirectionalInput: 1
+  m_TeleportTrigger: 0
+  m_FilterSelectionByHitNormal: 0
+  m_UpNormalToleranceDegrees: 30
+  m_Teleporting:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1412230876
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5797,7 +6242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.57355
+      value: 7.967
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5805,23 +6250,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0377197
+      value: 0.017999649
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5829,7 +6274,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -5894,16 +6339,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3757144308502114627, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
---- !u!4 &1686641476 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-  m_PrefabInstance: {fileID: 1404024822}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1691519842 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-  m_PrefabInstance: {fileID: 494066127}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1701131286 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3763939406476016936, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -6177,11 +6612,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 8050146554237888290, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
---- !u!4 &1817465345 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-  m_PrefabInstance: {fileID: 369859843}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1827910747 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5114047310840488176, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -6706,6 +7136,10 @@ PrefabInstance:
       propertyPath: taskUIElements.Array.data[0].taskID
       value: 02
       objectReference: {fileID: 0}
+    - target: {fileID: 2275949088433757758, guid: 599e2e099a3c5ee4393076047a770c1f, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: The Medkit Fell, can you place it back on the holder
+      objectReference: {fileID: 0}
     - target: {fileID: 2921491637950785003, guid: 599e2e099a3c5ee4393076047a770c1f, type: 3}
       propertyPath: m_Name
       value: 'Task '
@@ -6919,6 +7353,10 @@ PrefabInstance:
       propertyPath: taskUIElements.Array.data[0].taskID
       value: 03
       objectReference: {fileID: 0}
+    - target: {fileID: 2275949088433757758, guid: 599e2e099a3c5ee4393076047a770c1f, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: Put on Safety Glasses to enter lab.
+      objectReference: {fileID: 0}
     - target: {fileID: 3771180075495535908, guid: 599e2e099a3c5ee4393076047a770c1f, type: 3}
       propertyPath: m_text
       value: Put On Safety Glasses to enter lab
@@ -7125,63 +7563,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 5252561716709976814, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
---- !u!1001 &2041473371
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 346266665}
-    m_Modifications:
-    - target: {fileID: 3186622738594787520, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_Name
-      value: Teleport Anchor Variant (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 17.57355
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.6977596
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -15.600719
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8257329103062970048, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 77b8794a39acfb847a0e5ce88e90351e, type: 3}
 --- !u!1 &2073797707 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3905542187639478077, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -7545,6 +7926,13 @@ PrefabInstance:
     - target: {fileID: 5859125081900916767, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: taskUIElements.Array.data[0].checkmarkImage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5859125081900916767, guid: 01cf75484d280844099c954c910c7e50, type: 3}
+      propertyPath: taskUIElements.Array.data[0].incompleteText
+      value: 'In order to enter the lab and pass trough the red stripes you must
+        have your Safety glasses on.
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8161283435968967059, guid: 01cf75484d280844099c954c910c7e50, type: 3}
       propertyPath: m_LocalScale.x
