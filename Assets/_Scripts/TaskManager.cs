@@ -18,6 +18,7 @@ public class TaskManager : MonoBehaviour
 
     // Events for completed Tasks
     public UnityEvent<Task> OnTaskCompleted;
+    public UnityEvent<Task> OnTaskUncompleted;
     public UnityEvent OnAllTasksCompleted;
 
     private void Awake()
@@ -63,6 +64,33 @@ public class TaskManager : MonoBehaviour
             OnAllTasksCompleted?.Invoke();
         }
     }
+
+    /// <summary>
+    /// Marks a task as uncompleted.
+    /// </summary>
+    
+    public void UncompleteTask(string taskID)
+    {
+        Task task = tasks.Find(t => t.taskID == taskID);
+
+        if (task == null)
+        {
+            Debug.LogWarning($"Task with ID {taskID} not found.");
+            return;
+        }
+
+        if (!task.isCompleted)
+            return;
+
+        task.isCompleted = false;
+        Debug.Log($"Task marked as uncompleted: {task.description}");
+        
+        OnTaskUncompleted?.Invoke(task);
+
+    }
+
+
+
 
     /// <summary>
     /// Checks if all required tasks are completed. We still need to discuss with Jeff and Andy(the supervisor for PUMAS) what happens when all task are complete
