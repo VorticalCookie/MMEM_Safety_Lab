@@ -20,28 +20,27 @@ public class UITaskManager : MonoBehaviour
         [TextArea(2, 4)]
         public string completedText = "✓ Task Completed!";
         public Color completedTextColor = Color.green;
+        [TextArea(2, 4)]
+        public string incompleteText = "Task not completed."; // Add this for incomplete state
+        public Color incompleteTextColor = Color.white;
     }
 
-    [Header("Task UI Elements")]
     public List<TaskUIElement> taskUIElements = new List<TaskUIElement>();
-
-    [Header("Optional Settings")]
     public bool hideCheckmarksOnStart = true;
     public float checkmarkFadeInDuration = 0.3f;
 
     private void Start()
     {
-        // Subscribe to TaskManager events
         if (TaskManager.Instance != null)
         {
             TaskManager.Instance.OnTaskCompleted.AddListener(OnTaskCompleted);
+            TaskManager.Instance.OnTaskUncompleted.AddListener(OnTaskUncompleted); // Subscribe
         }
         else
         {
             Debug.LogError("TaskManager instance not found!");
         }
 
-        // Initialize UI - hide checkmarks if needed
         if (hideCheckmarksOnStart)
         {
             foreach (var uiElement in taskUIElements)
@@ -53,52 +52,50 @@ public class UITaskManager : MonoBehaviour
             }
         }
 
-        // Check for already completed tasks (in case UI is loaded after tasks are done)
         RefreshUI();
     }
 
     private void OnDestroy()
     {
-        // Unsubscribe from events
         if (TaskManager.Instance != null)
         {
             TaskManager.Instance.OnTaskCompleted.RemoveListener(OnTaskCompleted);
+            TaskManager.Instance.OnTaskUncompleted.RemoveListener(OnTaskUncompleted); // Unsubscribe
         }
     }
 
-    /// <summary>
-    /// Called when a task is completed - updates the corresponding UI element.
-    /// </summary>
     private void OnTaskCompleted(Task completedTask)
     {
         TaskUIElement uiElement = taskUIElements.Find(ui => ui.taskID == completedTask.taskID);
-
         if (uiElement == null)
         {
             Debug.LogWarning($"No UI element found for task ID: {completedTask.taskID}");
             return;
         }
-
         UpdateTaskUI(uiElement, true);
     }
 
-    /// <summary>
-    /// Updates a single task UI element (checkmark and text).
-    /// </summary>
+    private void OnTaskUncompleted(Task uncompletedTask)
+    {
+        TaskUIElement uiElement = taskUIElements.Find(ui => ui.taskID == uncompletedTask.taskID);
+        if (uiElement == null)
+        {
+            Debug.LogWarning($"No UI element found for task ID: {uncompletedTask.taskID}");
+            return;
+        }
+        ResetTaskUI(uiElement);
+    }
+
     private void UpdateTaskUI(TaskUIElement uiElement, bool animate = false)
     {
-        // Update text FIRST (so it's visible immediately)
         if (uiElement.taskText != null)
         {
             uiElement.taskText.text = uiElement.completedText;
             uiElement.taskText.color = uiElement.completedTextColor;
         }
-
-        // Enable and show checkmark
         if (uiElement.checkmarkImage != null)
         {
             uiElement.checkmarkImage.enabled = true;
-
             if (animate && checkmarkFadeInDuration > 0)
             {
                 StartCoroutine(FadeInCheckmark(uiElement.checkmarkImage));
@@ -106,35 +103,41 @@ public class UITaskManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Refreshes all UI elements based on current task completion status.
-    /// Useful for initializing UI or syncing after loading.
-    /// </summary>
+    private void ResetTaskUI(TaskUIElement uiElement)
+    {
+        if (uiElement.taskText != null)
+        {
+            uiElement.taskText.text = uiElement.incompleteText;
+            uiElement.taskText.color = uiElement.incompleteTextColor;
+        }
+        if (uiElement.checkmarkImage != null)
+        {
+            uiElement.checkmarkImage.enabled = false;
+        }
+    }
+
     public void RefreshUI()
     {
         if (TaskManager.Instance == null) return;
-
         foreach (var uiElement in taskUIElements)
         {
             bool isCompleted = TaskManager.Instance.IsTaskCompleted(uiElement.taskID);
-
             if (isCompleted)
             {
-                UpdateTaskUI(uiElement, false); // No animation on refresh
+                UpdateTaskUI(uiElement, false);
+            }
+            else
+            {
+                ResetTaskUI(uiElement);
             }
         }
     }
 
-    /// <summary>
-    /// Optional fade-in animation for checkmark.
-    /// </summary>
     private System.Collections.IEnumerator FadeInCheckmark(Image checkmark)
     {
         Color originalColor = checkmark.color;
         Color transparent = new Color(originalColor.r, originalColor.g, originalColor.b, 0f);
-
         checkmark.color = transparent;
-
         float elapsed = 0f;
         while (elapsed < checkmarkFadeInDuration)
         {
@@ -143,18 +146,24 @@ public class UITaskManager : MonoBehaviour
             checkmark.color = new Color(originalColor.r, originalColor.g, originalColor.b, alpha);
             yield return null;
         }
-
         checkmark.color = originalColor;
     }
+
     private void OnEnable()
     {
         if (TaskManager.Instance != null)
+        {
             TaskManager.Instance.OnTaskCompleted.AddListener(OnTaskCompleted);
+            TaskManager.Instance.OnTaskUncompleted.AddListener(OnTaskUncompleted);
+        }
     }
 
     private void OnDisable()
     {
         if (TaskManager.Instance != null)
+        {
             TaskManager.Instance.OnTaskCompleted.RemoveListener(OnTaskCompleted);
+            TaskManager.Instance.OnTaskUncompleted.RemoveListener(OnTaskUncompleted);
+        }
     }
 }
