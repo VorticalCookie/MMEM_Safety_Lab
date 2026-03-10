@@ -34,6 +34,7 @@ public class WhiteZone : MonoBehaviour
         }
     }
 
+    /// When trash exits the zone, we check if there is any trash left. If not, we mark the task as complete.
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Trash"))
@@ -52,8 +53,8 @@ public class WhiteZone : MonoBehaviour
         }
     }
 
- 
 
+    /// Marks the task as complete in the TaskManager when there is no trash left in the zone.
     private void MarkTaskComplete()
     {
         taskCompleted = true;
@@ -66,7 +67,7 @@ public class WhiteZone : MonoBehaviour
             Debug.LogWarning("TaskManager instance not found!");
         }
     }
-
+    /// Marks the task as incomplete in the TaskManager when trash enters the zone.
     private void MarkTaskIncomplete()
     {
         taskCompleted = false;
