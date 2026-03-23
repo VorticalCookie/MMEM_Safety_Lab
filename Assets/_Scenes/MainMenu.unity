@@ -3666,6 +3666,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8508843226809422496, guid: caf67f0b6b0acba428007b8307a7bec1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102434284006199081, guid: caf67f0b6b0acba428007b8307a7bec1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9122433879200646652, guid: caf67f0b6b0acba428007b8307a7bec1, type: 3}
       propertyPath: m_DefaultActionMap
       value: XRI Left Interaction
