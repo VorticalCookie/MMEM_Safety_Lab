@@ -2279,6 +2279,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EyeWash_Station
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 992d1a28d465bc64da17373f18f1a5c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5465,6 +5469,134 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7982514333411904482, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
+--- !u!1001 &699910424
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.182524
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.626152
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 21.74416
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379300857225677181, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402167445582941570, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_Name
+      value: EyeWash_Station (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548401104342642042, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4342723
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548401104342642042, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4342723
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548401104342642042, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4342723
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548401104342642042, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548401104342642042, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.075
+      objectReference: {fileID: 0}
+    - target: {fileID: 8548401104342642042, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.204
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7402167445582941570, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699910427}
+    - targetCorrespondingSourceObject: {fileID: 7402167445582941570, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699910426}
+  m_SourcePrefab: {fileID: 100100000, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+--- !u!1 &699910425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7402167445582941570, guid: 1963cb799058b0148ba84a594b0746a9, type: 3}
+  m_PrefabInstance: {fileID: 699910424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &699910426
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699910425}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.001503, y: 1.4687375, z: 0.9935124}
+  m_Center: {x: -0.43, y: 0.72, z: -0.29}
+--- !u!114 &699910427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 699910425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b5c683a82d6f0459de53728f739f11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ZoneTask
+  taskID: 06
+  requiredTime: 5
+  particleEffects: {fileID: 1814979106}
 --- !u!1 &703408168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8797098904796075218, guid: 42b70d01e7bfe7f478f188f8cdca32fb, type: 3}
@@ -14657,9 +14789,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5754084199372789682, guid: 1ab4e63b9c54231459274d0990726091, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 8080000407690139300, guid: 1ab4e63b9c54231459274d0990726091, type: 3}
     - target: {fileID: 919132149155446097, guid: 1ab4e63b9c54231459274d0990726091, type: 3}
       propertyPath: m_Name
       value: Lab1_SinkBowl
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1ab4e63b9c54231459274d0990726091, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24618,7 +24758,6 @@ SceneRoots:
   - {fileID: 1721719250}
   - {fileID: 64710618}
   - {fileID: 1074854402}
-  - {fileID: 1592173894}
   - {fileID: 295909593}
   - {fileID: 1756942714}
   - {fileID: 1592330356}
@@ -24646,3 +24785,5 @@ SceneRoots:
   - {fileID: 1454672591}
   - {fileID: 827818508}
   - {fileID: 1251381594}
+  - {fileID: 1592173894}
+  - {fileID: 699910424}
