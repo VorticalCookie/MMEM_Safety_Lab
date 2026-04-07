@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/_Scenes/MainMenu.unity
     guid: f00999324143b4141ac99c17fafc89b9
   - enabled: 1
-    path: Assets/_Scenes/Plumas_Labs.unity
+    path: Assets/_Prefabs/Plumas_Labs.unity
     guid: 76c5ff78f6ebeb9438434031757460ca
   - enabled: 1
     path: Assets/_Scenes/TutorialZone.unity
