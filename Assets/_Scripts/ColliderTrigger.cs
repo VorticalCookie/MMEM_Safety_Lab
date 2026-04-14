@@ -6,6 +6,7 @@ public class ColliderTrigger : MonoBehaviour
     public MeshRenderer meshRendererToEnable;
     [Header("Pop Up Panel to Enable")]
     public GameObject popUpPanelToEnable;
+    public GameObject optionalpPopUpPanelToEnable;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,6 +21,7 @@ public class ColliderTrigger : MonoBehaviour
             if (popUpPanelToEnable != null)
             {
                 popUpPanelToEnable.SetActive(true);
+                optionalpPopUpPanelToEnable.SetActive(true);
             }
         }
     }
