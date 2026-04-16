@@ -21,6 +21,8 @@ public class Question
     public string[] answers;
     public int correctIndex;
     public string explanation;
+
+    
 }
 
 public class QuizManager : MonoBehaviour
@@ -30,6 +32,8 @@ public class QuizManager : MonoBehaviour
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI timerText;
     public TextMeshProUGUI explanationText;
+
+   
 
     /// Retry panel and button to allow the player to retry the quiz if they fail.
     public GameObject retryPanel;
@@ -49,6 +53,7 @@ public class QuizManager : MonoBehaviour
     private bool quizStarted = false;
 
     public UnityEvent onQuizComplete;
+    public UnityEvent OnPlayerFailed;
 
     //Hide retry panel on start and set up retry button listener
     void Start()
@@ -189,6 +194,7 @@ public class QuizManager : MonoBehaviour
         {
             Debug.Log("Not all correct. Show retry.");
             retryPanel.SetActive(true);
+            OnPlayerFailed?.Invoke();
             //Add lives system and reduce 1 live in the future
         }
     }
