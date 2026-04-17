@@ -160,7 +160,7 @@ public class QuizManager : MonoBehaviour
     /// This allows the player to see the explanation or timeout message before moving on.
     IEnumerator NextQuestionDelay()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(3f);
         currentQuestionIndex++;
         LoadQuestion();
     }
