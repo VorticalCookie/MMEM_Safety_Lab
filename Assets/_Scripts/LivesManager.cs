@@ -6,6 +6,11 @@ using UnityEngine.Events;
 /// Made by Marco Espinoza
 /// Last Update: 4/16/2026
 /// </summary>
+/// 
+
+[System.Serializable]
+public class IntEvent : UnityEvent<int> { }
+
 public class LivesManager : MonoBehaviour
 {
     public int startingLives = 5;
@@ -13,16 +18,21 @@ public class LivesManager : MonoBehaviour
 
     // Event triggered when all lives are lost
     public UnityEvent OnAllLivesLost;
+    public IntEvent OnLivesChanged;
 
     void Start()
     {
         currentLives = startingLives;
+        OnLivesChanged?.Invoke(currentLives);
+
     }
 
     public void LoseLife()
     {
         currentLives--;
         Debug.Log("Life lost! Lives remaining: " + currentLives);
+
+        OnLivesChanged?.Invoke(currentLives);
 
         if (currentLives <= 0)
         {
@@ -36,6 +46,7 @@ public class LivesManager : MonoBehaviour
     {
         currentLives = startingLives;
         Debug.Log("Lives reset to: " + currentLives);
+        OnLivesChanged?.Invoke(currentLives);
     }
 
     // Optional: expose current lives for other scripts
