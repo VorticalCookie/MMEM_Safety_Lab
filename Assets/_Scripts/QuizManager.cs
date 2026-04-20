@@ -48,8 +48,7 @@ public class QuizManager : MonoBehaviour
     // Tracks when the current question was displayed, so we can calculate time taken.
     private float questionStartTime;
 
-    // Full path to the CSV file. Written to Application.persistentDataPath so it works
-    // on all platforms (PC, Android, iOS, VR headsets) without permission issues.
+    // Full path to the CSV file. C:\Users\marco\AppData\LocalLow\CSU Chico\MMEM_SafetyLab
     private string csvFilePath;
 
     public UnityEvent onQuizComplete;
