@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 5fe8722cd07538043b7e34f095d2f201
+guid: e17c62629e9f06c47b566eb1dc3ceffe
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Props_Ryan_UVSET_2
-    second: {fileID: 2100000, guid: 2407e5c1e55415f4a9c5b25d5dcc4753, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
