@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 
 /// <summary>
@@ -16,28 +17,35 @@ public class WhiteZone : MonoBehaviour
     [Header("Task Settings")]
     public string taskID;
 
+    [Header("Events")]
+    public UnityEvent TrashDetected;
+
+    [Header("Detection Settings")]
+    public string tagToDetect = "Trash";
+
     // Track trash objects inside the zone
     private HashSet<GameObject> trashInZone = new HashSet<GameObject>();
     private bool taskCompleted = false;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Trash"))
+        if (other.CompareTag(tagToDetect))
         {
             trashInZone.Add(other.gameObject);
             print("Trash entered the zone, task marked as incomplete.");
             if (taskCompleted)
             {
                 MarkTaskIncomplete();
-                
             }
+            TrashDetected?.Invoke(); // <-- Invoke the event here
+            
         }
     }
 
     /// When trash exits the zone, we check if there is any trash left. If not, we mark the task as complete.
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Trash"))
+        if (other.CompareTag(tagToDetect))
         {
 
             print("Trash exit the zone, task marked as complete.");

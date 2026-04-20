@@ -13,7 +13,7 @@ public class ColliderTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player entered the trigger!");
-            // Disable the assigned MeshRenderer
+            // Enable the assigned MeshRenderer
             if (meshRendererToEnable != null)
             {
                 meshRendererToEnable.enabled = true;
@@ -21,6 +21,9 @@ public class ColliderTrigger : MonoBehaviour
             if (popUpPanelToEnable != null)
             {
                 popUpPanelToEnable.SetActive(true);
+            }
+            if (optionalpPopUpPanelToEnable != null)
+            {
                 optionalpPopUpPanelToEnable.SetActive(true);
             }
         }
