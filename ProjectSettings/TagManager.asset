@@ -8,6 +8,8 @@ TagManager:
   - Trash
   - FireExtinguisher
   - Food
+  - Safe Clothing
+  - Unsafe Clothing
   layers:
   - Default
   - TransparentFX

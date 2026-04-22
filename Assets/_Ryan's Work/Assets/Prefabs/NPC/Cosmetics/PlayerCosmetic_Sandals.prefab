@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCosmetic_Sandals
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 259199452096d4b4a82dbfd050dac10f, type: 3}
+      propertyPath: m_TagString
+      value: Unsafe Clothing
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

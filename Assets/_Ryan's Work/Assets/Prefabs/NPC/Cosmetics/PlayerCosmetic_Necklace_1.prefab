@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerCosmetic_Necklace_1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4336eca0f1d16b0498557258db943bbb, type: 3}
+      propertyPath: m_TagString
+      value: Unsafe Clothing
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

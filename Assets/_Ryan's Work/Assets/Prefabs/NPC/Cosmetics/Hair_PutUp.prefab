@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hair_PutUp
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f116e7cb0489e244c8f98d252cffadfd, type: 3}
+      propertyPath: m_TagString
+      value: Safe Clothing
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
