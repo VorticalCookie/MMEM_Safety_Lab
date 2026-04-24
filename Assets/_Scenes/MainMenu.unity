@@ -858,7 +858,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: "Creative Director...   Andy Avila Ayala\n \nProgrammer...          
         Marco Espinoza\n\nModeler...                  Ryan Early\n\nModeler...           
-        Brandon Thompson\n\nProducer...                 Hanna Strong\n"
+        Brandon Thompson\n\nProducer...                 Hannah Strong\n"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
