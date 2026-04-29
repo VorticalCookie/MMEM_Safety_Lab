@@ -21,8 +21,13 @@ public class LocationTest : MonoBehaviour
 
     [Header("Timer Settings")]
     public float timeLimit = 120f; // 2 minutes
+  
+
+    [Header("Events")]
     public UnityEvent OnTimerStart;
     public UnityEvent OnTimerFail;
+    public UnityEvent OnTaskComplete; 
+
 
     private float timer;
 
@@ -39,7 +44,6 @@ public class LocationTest : MonoBehaviour
         OnTimerStart?.Invoke();
         Debug.Log("Timer started.");
     }
-
 
     void Update()
     {
@@ -85,6 +89,8 @@ public class LocationTest : MonoBehaviour
 
         if (TaskManager.Instance != null)
             TaskManager.Instance.CompleteTask(taskID);
+
+        OnTaskComplete?.Invoke();
 
         Debug.Log("Socket task completed!");
     }
