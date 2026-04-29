@@ -20,6 +20,7 @@ public class TaskManager : MonoBehaviour
     public UnityEvent<Task> OnTaskCompleted;
     public UnityEvent<Task> OnTaskUncompleted;
     public UnityEvent OnAllTasksCompleted;
+    public UnityEvent OnTasksReset;
 
     private void Awake()
     {
@@ -113,6 +114,22 @@ public class TaskManager : MonoBehaviour
     {
         Task task = tasks.Find(t => t.taskID == taskID);
         return task != null && task.isCompleted;
+    }
+    /// <summary>
+    /// Marks all tasks as uncompleted and invokes the OnTasksReset event.
+    /// </summary>
+    public void ResetTasks()
+    {
+        foreach (Task task in tasks)
+        {
+            if (task.isCompleted)
+            {
+                task.isCompleted = false;
+                OnTaskUncompleted?.Invoke(task);
+            }
+        }
+        OnTasksReset?.Invoke();
+        Debug.Log("All tasks have been reset to incomplete.");
     }
 }
 
