@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,8 +27,10 @@ public class LocationTest : MonoBehaviour
     [Header("Events")]
     public UnityEvent OnTimerStart;
     public UnityEvent OnTimerFail;
-    public UnityEvent OnTaskComplete; 
+    public UnityEvent OnTaskComplete;
 
+    [Header("UI")]
+    public TMP_Text timerText;
 
     private float timer;
 
@@ -47,7 +50,11 @@ public class LocationTest : MonoBehaviour
 
     void Update()
     {
-        if (!timerRunning || taskCompleted) return;
+        if (!timerRunning || taskCompleted)
+        {
+            UpdateTimerText();
+            return;
+        }
 
         timer -= Time.deltaTime;
 
@@ -57,6 +64,8 @@ public class LocationTest : MonoBehaviour
             OnTimerFail?.Invoke();
             Debug.Log("Task failed. Time ran out.");
         }
+
+        UpdateTimerText();
     }
 
     /// Increments the trigger count and checks for task completion.
@@ -93,5 +102,14 @@ public class LocationTest : MonoBehaviour
         OnTaskComplete?.Invoke();
 
         Debug.Log("Socket task completed!");
+    }
+    private void UpdateTimerText()
+    {
+        if (timerText != null)
+        {
+            int minutes = Mathf.FloorToInt(Mathf.Max(timer, 0) / 60f);
+            int seconds = Mathf.FloorToInt(Mathf.Max(timer, 0) % 60f);
+            timerText.text = $"{minutes}:{seconds:00} Sec.";
+        }
     }
 }
