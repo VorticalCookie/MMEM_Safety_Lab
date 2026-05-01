@@ -4,6 +4,7 @@ public class PauseMenu : MonoBehaviour
 {
     [Header("Assign your pause menu UI panel here")]
     public GameObject pauseMenuPanel;
+    public GameObject taskListPanel;
 
     private bool isPaused = false;
 
@@ -19,7 +20,10 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = !isPaused;
         if (pauseMenuPanel != null)
+        {
             pauseMenuPanel.SetActive(isPaused);
+            taskListPanel.SetActive(false);
+        }
 
         Time.timeScale = isPaused ? 0f : 1f;
     }
@@ -29,7 +33,12 @@ public class PauseMenu : MonoBehaviour
     {
         isPaused = false;
         if (pauseMenuPanel != null)
-            pauseMenuPanel.SetActive(false);
+        {  pauseMenuPanel.SetActive(false);
+            taskListPanel.SetActive(false);
+        }
+           
         Time.timeScale = 1f;
     }
+
+    
 }
