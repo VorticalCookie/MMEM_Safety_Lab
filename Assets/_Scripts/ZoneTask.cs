@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// Completes a task when the player stays inside a trigger zone for a specified amount of time.
@@ -22,6 +23,11 @@ public class ZoneTask : MonoBehaviour
     public ParticleSystem particleEffects; // Particle effect to play when the task is completed
 
 
+    [Header("Events")]
+    public UnityEvent OnPlayerEnterZone; // Optional event for when player comes close
+    public UnityEvent OnPlayerExitZone; // Optional event for when player comes close
+
+
     private float timer = 0f;
     private bool playerInside = false;
     private bool taskCompleted = false;
@@ -32,6 +38,7 @@ public class ZoneTask : MonoBehaviour
         {
             playerInside = true;
             timer = 0f;
+            OnPlayerEnterZone?.Invoke();
 
             if (particleEffects != null && !particleEffects.isPlaying)
             {
@@ -52,6 +59,9 @@ public class ZoneTask : MonoBehaviour
         {
             playerInside = false;
             timer = 0f;
+
+           
+            OnPlayerExitZone?.Invoke();
 
             if (particleEffects != null && particleEffects.isPlaying)
             {
