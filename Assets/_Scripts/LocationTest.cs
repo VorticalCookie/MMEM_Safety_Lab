@@ -14,15 +14,14 @@ public class LocationTest : MonoBehaviour
     public string taskID;
 
     [Header("Completion Settings")]
-    public int targetTriggers = 3; //Change to the number of objects needed for the task
+    public int targetTriggers = 3;
 
     private int currentTriggers = 0;
     private bool taskCompleted = false;
     private bool timerRunning = false;
 
     [Header("Timer Settings")]
-    public float timeLimit = 120f; // 2 minutes
-  
+    public float timeLimit = 120f;
 
     [Header("Events")]
     public UnityEvent OnTimerStart;
@@ -30,13 +29,10 @@ public class LocationTest : MonoBehaviour
     public UnityEvent OnTaskComplete;
 
     [Header("UI")]
-    public TMP_Text timerText;
+    public TMP_Text timerText; 
 
     private float timer;
 
-    /// <summary>
-    /// Starts the timed event for the location test. 
-    /// </summary>
     public void StartTimedEvent()
     {
         if (timerRunning || taskCompleted) return;
@@ -68,7 +64,6 @@ public class LocationTest : MonoBehaviour
         UpdateTimerText();
     }
 
-    /// Increments the trigger count and checks for task completion.
     public void IncrementTrigger()
     {
         if (!timerRunning || taskCompleted) return;
@@ -83,7 +78,6 @@ public class LocationTest : MonoBehaviour
         }
     }
 
-    // Decrements the trigger count, ensuring it doesn't go below zero.
     public void DecrementTrigger()
     {
         if (taskCompleted) return;
@@ -103,13 +97,22 @@ public class LocationTest : MonoBehaviour
 
         Debug.Log("Socket task completed!");
     }
+
     private void UpdateTimerText()
     {
         if (timerText != null)
         {
-            int minutes = Mathf.FloorToInt(Mathf.Max(timer, 0) / 60f);
-            int seconds = Mathf.FloorToInt(Mathf.Max(timer, 0) % 60f);
-            timerText.text = $"{minutes}:{seconds:00} Sec.";
+            // Show timer only if running and not completed
+            bool show = timerRunning && !taskCompleted;
+            if (timerText.gameObject.activeSelf != show)
+                timerText.gameObject.SetActive(show);
+
+            if (show)
+            {
+                int minutes = Mathf.FloorToInt(Mathf.Max(timer, 0) / 60f);
+                int seconds = Mathf.FloorToInt(Mathf.Max(timer, 0) % 60f);
+                timerText.text = $"{minutes}:{seconds:00} Sec.";
+            }
         }
     }
 }
