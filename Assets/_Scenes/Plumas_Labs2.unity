@@ -32554,6 +32554,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8085496503365869103}
+        m_TargetAssemblyTypeName: SceneTransitionManager, Assembly-CSharp
+        m_MethodName: GoToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnLifeLost:
     m_PersistentCalls:
       m_Calls: []
@@ -54048,6 +54060,22 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[7].m_Target
       value: 
       objectReference: {fileID: 1118599913}
+    - target: {fileID: 1444184983375016812, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444184983375016812, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444184983375016812, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444184983375016812, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2644253765334077387, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
@@ -54096,11 +54124,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin (XR Rig) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5808945512722684103, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808945512722684103, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808945512722684103, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808945512722684103, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+--- !u!114 &8085496503365869103 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 846391067717975738, guid: 7a16b756ab0bf1c4ca69eb8446fc0bdf, type: 3}
+  m_PrefabInstance: {fileID: 8085496503365869102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfa74f80b0d6ce4aa8c518d0620174c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionManager
 --- !u!1001 &8094110433858963601
 PrefabInstance:
   m_ObjectHideFlags: 0
