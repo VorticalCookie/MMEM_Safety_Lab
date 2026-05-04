@@ -16,10 +16,10 @@ MonoBehaviour:
   - title: Burst
     position:
       serializedVersion: 2
-      x: 263
-      y: 295
+      x: 264
+      y: 263
       width: 475
-      height: 2220
+      height: 2372
     contents:
     - model: {fileID: 8926484042661614700}
       id: 0
@@ -36,8 +36,8 @@ MonoBehaviour:
   - title: Burst
     position:
       serializedVersion: 2
-      x: 895
-      y: 293
+      x: 897
+      y: 294
       width: 474
       height: 2340
     contents:
@@ -58,9 +58,9 @@ MonoBehaviour:
   uiBounds:
     serializedVersion: 2
     x: 264
-    y: 293
-    width: 1105
-    height: 2342
+    y: -28
+    width: 1107
+    height: 2663
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -84,6 +84,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615004}
   - {fileID: 8926484042661615052}
   - {fileID: 8926484042661615078}
+  - {fileID: 8926484042661615092}
   m_UIPosition: {x: 0, y: 0}
   m_UICollapsed: 1
   m_UISuperCollapsed: 0
@@ -134,7 +135,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661614703}
-  m_UIPosition: {x: 289, y: 354}
+  m_UIPosition: {x: 290, y: 322}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -143,7 +144,9 @@ MonoBehaviour:
   m_Label: Spawn system
   m_Data: {fileID: 8926484042661614702}
   m_InputFlowSlot:
-  - link: []
+  - link:
+    - context: {fileID: 8926484042661615092}
+      slotIndex: 0
   - link: []
   m_OutputFlowSlot:
   - link:
@@ -3234,7 +3237,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children:
   - {fileID: 8926484042661615000}
-  m_UIPosition: {x: 920, y: 352}
+  m_UIPosition: {x: 922, y: 353}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -3243,7 +3246,9 @@ MonoBehaviour:
   m_Label: Spawn system
   m_Data: {fileID: 8926484042661614998}
   m_InputFlowSlot:
-  - link: []
+  - link:
+    - context: {fileID: 8926484042661615092}
+      slotIndex: 0
   - link: []
   m_OutputFlowSlot:
   - link:
@@ -3455,7 +3460,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615019}
   - {fileID: 8926484042661615023}
   - {fileID: 8926484042661615042}
-  m_UIPosition: {x: 920, y: 798}
+  m_UIPosition: {x: 922, y: 799}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -5071,7 +5076,7 @@ MonoBehaviour:
   m_Children:
   - {fileID: 8926484042661615054}
   - {fileID: 8926484042661615057}
-  m_UIPosition: {x: 920, y: 1533}
+  m_UIPosition: {x: 922, y: 1534}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots: []
@@ -5912,7 +5917,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615083}
   - {fileID: 8926484042661615086}
   - {fileID: 8926484042661615089}
-  m_UIPosition: {x: 920, y: 2005}
+  m_UIPosition: {x: 922, y: 2006}
   m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
@@ -6305,3 +6310,55 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
   m_Direction: 0
   m_LinkedSlots: []
+--- !u!114 &8926484042661615092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2461f61b3c026d54db1951a4e17ab20e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualEffectGraph.Editor::UnityEditor.VFX.VFXBasicEvent
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 114350483966674976}
+  m_Children: []
+  m_UIPosition: {x: 573, y: -28}
+  m_UICollapsed: 0
+  m_UISuperCollapsed: 0
+  m_InputSlots: []
+  m_OutputSlots: []
+  m_Label: 
+  m_Data: {fileID: 8926484042661615093}
+  m_InputFlowSlot:
+  - link: []
+  m_OutputFlowSlot:
+  - link:
+    - context: {fileID: 8926484042661614700}
+      slotIndex: 0
+    - context: {fileID: 8926484042661614997}
+      slotIndex: 0
+  eventName: OnPlay
+--- !u!114 &8926484042661615093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68759077adc0b143b6e1c101e82065e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualEffectGraph.Editor::UnityEditor.VFX.VFXDataSpawner
+  m_UIIgnoredErrors: []
+  m_Parent: {fileID: 0}
+  m_Children: []
+  m_UIPosition: {x: 0, y: 0}
+  m_UICollapsed: 1
+  m_UISuperCollapsed: 0
+  title: 
+  m_Owners:
+  - {fileID: 8926484042661615092}
