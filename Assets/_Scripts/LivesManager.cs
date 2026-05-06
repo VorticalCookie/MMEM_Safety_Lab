@@ -18,6 +18,7 @@ public class LivesManager : MonoBehaviour
 
     // Event triggered when all lives are lost
     public UnityEvent OnAllLivesLost;
+    public UnityEvent OnLifeLost;
     public IntEvent OnLivesChanged;
 
     void Start()
@@ -33,6 +34,7 @@ public class LivesManager : MonoBehaviour
         Debug.Log("Life lost! Lives remaining: " + currentLives);
 
         OnLivesChanged?.Invoke(currentLives);
+        OnLifeLost?.Invoke();
 
         if (currentLives <= 0)
         {
