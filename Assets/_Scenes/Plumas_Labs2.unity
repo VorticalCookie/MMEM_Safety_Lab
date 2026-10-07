@@ -52518,6 +52518,10 @@ PrefabInstance:
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 3602406064198520190, guid: d64ccbaa836d51245b2fff1e77eca1bb, type: 3}
+      propertyPath: tasks.Array.data[0].isCompleted
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602406064198520190, guid: d64ccbaa836d51245b2fff1e77eca1bb, type: 3}
       propertyPath: tasks.Array.data[1].description
       value: Pick Up Fallen Medkit
       objectReference: {fileID: 0}

@@ -6,7 +6,7 @@ using TMPro;
 /// <summary>
 /// UITaskManager handles the visual representation of tasks in the UI.
 /// Shows checkmarks and updates text when tasks are completed.
-/// Made by Marco Espinoza (edited by Claude)
+/// Made by Marco Espinoza 
 /// Last Update: 2/9/2026
 /// </summary>
 public class UITaskManager : MonoBehaviour
