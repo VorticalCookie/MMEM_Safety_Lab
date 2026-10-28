@@ -77,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   meshRendererToEnable: {fileID: 5609116884574342934}
   popUpPanelToEnable: {fileID: 2475604168140750258}
+  optionalpPopUpPanelToEnable: {fileID: 0}
 --- !u!1 &5607815685196436658
 GameObject:
   m_ObjectHideFlags: 0
