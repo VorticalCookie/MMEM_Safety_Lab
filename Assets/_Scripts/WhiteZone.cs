@@ -24,7 +24,7 @@ public class WhiteZone : MonoBehaviour
     public string tagToDetect = "Trash";
 
     // Track trash objects inside the zone
-    public HashSet<GameObject> trashInZone = new HashSet<GameObject>();
+    private HashSet<GameObject> trashInZone = new HashSet<GameObject>();
     private bool taskCompleted = false;
 
     private void OnTriggerEnter(Collider other)
